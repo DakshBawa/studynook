@@ -1,0 +1,9 @@
+/* Floor plan: seats, zones, rooms */
+.plan { background-color: #fbfaff; background-image: radial-gradient(#2b264016 1px, transparent 1px); background-size: 18px 18px; }
+.seat { transition: background-color .5s ease, transform .15s ease, opacity .2s; border-radius: 7px; }
+.seat:hover:not(:disabled) { transform: scale(1.15); }
+.zone-pulse { animation: pulse-ring 1.2s ease-in-out 3; }
+@keyframes pulse-ring { 0%, 100% { box-shadow: 0 0 0 0 #5b5bd600; } 50% { box-shadow: 0 0 0 8px #5b5bd640; } }
+.live-dot { animation: blink 1.6s ease-in-out infinite; }
+@keyframes blink { 50% { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { .zone-pulse, .live-dot { animation: none; } .seat { transition: none; } }
